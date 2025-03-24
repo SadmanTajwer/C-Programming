@@ -1,21 +1,21 @@
 #include <stdio.h>
 #define MAX_SIZE 100 // Define the maximum size of the queue
 
-int queue[MAX_SIZE]; // Declare an array to store queue elements
-int front = -1; // Initialize front of the queue
-int back = -1; // Initialize back of the queue
+int queue[MAX_SIZE]; 
+int front = -1; 
+int back = -1; 
 
-// Function to insert an element into the queue
+
 void enqueue(int item) {
-    if (back == MAX_SIZE - 1) { // Check if the queue is full
-        printf("Error: Queue is full\n"); // Print error message if queue is full
-        return; // Return from the function
+    if (back == MAX_SIZE - 1) { 
+        printf("Error: Queue is full\n"); 
+        return; 
     }
-    if (front == -1) { // Check if the queue is empty
-        front = 0; // Set front to 0 if queue is empty
+    if (front == -1) { 
+        front = 0; 
     }
-    back++; // Increment back to insert the new element
-    queue[back] = item; // Insert the item into the queue
+    back++; 
+    queue[back] = item; 
 }
 
 // Function to display the elements in the queue
